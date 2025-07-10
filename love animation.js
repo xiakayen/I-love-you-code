@@ -8,8 +8,8 @@ const el = {
 
   i: qs(".lttr--I"),
   l: qs(".lttr--L"),
-  o: qs(".lttr--O"),
-  v: qs(".lttr--V"),
+  i2: qs(".lttr--I2"),
+  k: qs(".lttr--K"),
   e: qs(".lttr--E"),
   y: qs(".lttr--Y"),
   o2: qs(".lttr--O2"),
@@ -86,14 +86,14 @@ const crtLoveTl = () => {
     new mojs.Tween({
       duration: move,
       onStart: () => {
-        [el.i, el.l, el.o, el.v, el.e, el.y, el.o2, el.u].forEach((el) => {
+        [el.i, el.l, el.i2, el.k, el.e, el.y, el.o2, el.u].forEach((el) => {
           el.style.opacity = 1;
           el.style =
             "transform: translate(0px, 0px) rotate(0deg) skew(0deg, 0deg) scale(1, 1); opacity: 1;";
         });
       },
       onComplete: () => {
-        [el.l, el.o, el.v, el.e].forEach((el) => (el.style.opacity = 0));
+        [el.l, el.i2, el.k, el.e].forEach((el) => (el.style.opacity = 0));
         el.blop.play();
       },
     }),
@@ -126,14 +126,14 @@ const crtLoveTl = () => {
       duration: 50,
       delay: 4050,
       onUpdate: (progress) => {
-        [el.i, el.l, el.o, el.v, el.e, el.y, el.o2, el.u].forEach((el) => {
+        [el.i, el.l, el.i2, el.k, el.e, el.y, el.o2, el.u].forEach((el) => {
           el.style = `transform: translate(0px, 0px) rotate(0deg) skew(0deg, 0deg) scale(1, 1); opacity: ${
             1 * progress
           };`;
         });
       },
       onComplete: () => {
-        [el.i, el.l, el.o, el.v, el.e, el.y, el.o2, el.u].forEach((el) => {
+        [el.i, el.l, el.i2, el.k, el.e, el.y, el.o2, el.u].forEach((el) => {
           el.style.opacity = 1;
           el.style =
             "transform: translate(0px, 0px) rotate(0deg) skew(0deg, 0deg) scale(1, 1); opacity: 1;";
@@ -200,7 +200,7 @@ const crtLoveTl = () => {
       }),
 
     new mojs.Html({
-      // [I] LOVE YOU
+      // [I] LIKE YOU
       ...opts,
       el: el.i,
       x: { 0: 34 },
@@ -227,35 +227,35 @@ const crtLoveTl = () => {
       }),
 
     new mojs.Html({
-      // I [L]OVE YOU
+      // I [L]IKE YOU
       ...opts,
       el: el.l,
       x: { 0: 15 },
     }),
 
     new mojs.Html({
-      // I L[O]VE YOU
+      // I L[I]KE YOU
       ...opts,
-      el: el.o,
-      x: { 0: 11 },
+      el: el.i2,
+      x: { 0: 8 },
     }),
 
     new mojs.Html({
-      // I LO[V]E YOU
+      // I LI[K]E YOU
       ...opts,
-      el: el.v,
-      x: { 0: 3 },
+      el: el.k,
+      x: { 0: -2 },
     }),
 
     new mojs.Html({
-      // I LOV[E] YOU
+      // I LIK[E] YOU
       ...opts,
       el: el.e,
-      x: { 0: -3 },
+      x: { 0: -8 },
     }),
 
     new mojs.Html({
-      // I LOVE [Y]OU
+      // I LIKE [Y]OU
       ...opts,
       el: el.y,
       x: { 0: -20 },
@@ -272,7 +272,7 @@ const crtLoveTl = () => {
       }),
 
     new mojs.Html({
-      // I LOVE Y[O]U
+      // I LIKE Y[O]U
       ...opts,
       el: el.o2,
       x: { 0: -27 },
@@ -289,7 +289,7 @@ const crtLoveTl = () => {
       }),
 
     new mojs.Html({
-      // I LOVE YO[U]
+      // I LIKE YO[U]
       ...opts,
       el: el.u,
       x: { 0: -32 },
